@@ -3,7 +3,9 @@ package klasywewnetrzne;
 public class Main {
     public static void main(String[] args) {
         KontoBankowe kontoBankowe = new KontoBankowe(1000);
+        System.out.println(kontoBankowe.getStanKonta());
         kontoBankowe.start(5);
+        System.out.println(kontoBankowe.getStanKonta());
     }
 }
 
@@ -20,7 +22,7 @@ class KontoBankowe {
 
     void start(double stopa) {
         Odsetki odsetki = new Odsetki(stopa);
-        odsetki.zmienStanKonta(stopa);
+        //odsetki.zmienStanKonta(stopa);
     }
 
     class Odsetki {
